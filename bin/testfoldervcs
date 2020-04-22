@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const app = require('../app').default
+
+try {
+    app();
+} catch (error) {
+    console.error(error.message)
+}
