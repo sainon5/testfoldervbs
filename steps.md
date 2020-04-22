@@ -58,7 +58,7 @@
 
 
 13. run `./node_modules/.bin/tsc` to compile
-14. `git add -A` to add code to git.
+14. `git add -A` to add code to git. Then go to source Control and Commit what you need committed.
 
 ### Code blocks
 
