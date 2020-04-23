@@ -147,3 +147,8 @@ In `Index.ts` we have a looped array that takes the number of loops from the fir
 `() =>` is better than `function()`unless function is specifically neded
 
 ### Javascript
+
+### Git ettiquite 
+<!-- A properly formed Git commit subject line should always be able to complete the following sentence: -->
+
+<!-- If applied, this commit will your subject line here -->
