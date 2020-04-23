@@ -133,7 +133,40 @@ In `Index.ts` we have a looped array that takes the number of loops from the fir
     })
     ```
 7. Replace what is in `test` under `scripts` in `package.json`with `"./node_modules/.bin/ava"`, you are now able to run a test with `npm test`in the terminal.
-8. 
+
+### adding a project
+1. add the following to `utils.ts`
+    ```js
+     export const log = (message: string) => {
+     console.info(`test ${message}`)
+    }
+    export const add = (firstValue: number, secondValue: number) =>{
+        const steve = firstValue + secondValue;
+        return steve
+    }
+    ```
+2. add the following to index.ts beneath the array, replacing `console.info(phrase)` with
+    ```js
+        const result =add(9,10);
+        log(result.toString());
+    });
+    ```
+    also ammend line 1 to be
+    ```js
+    import utils,{log,add} from './utils';
+    ```
+    What this does is imports the log and add functions from the `./utils` file. add requires the numbers from 9,10 in `index.ts` and outputs it as result. result is then taken by log. which requires a message `log(result.toString())` the message is in the brackets, `result.toString` it takes the result of 9 = 10, as solved in the add function with in `utils.ts` which is a number, and turns it into a string. Log takes the message result, adds test before it, and outputs it to console.
+3. replacing the end of `secondValue` with ? in the add fuction and adding ?? 20 after the `secondValue` in steve function. it will replace the second value in `index.ts` if it isn't valid
+4.  
+
+### Github commits and ettiquite
+
+1. install commitizen with `npm install commitizen -g` and run `commitizen init cz-conventional-changelog --save-dev --save-exact`afterwards. the `-g` means commitizen is installed globally, and will not need to be installed in another project on this device.
+2. now entering `npx git-cz`will being up a selection, navigatable by up and down arrows to select the correct option for your commit. Pressing enter will send you to the short scope of your commit, for example i changed a section in my steps. Therefore my scope was steps, press enter and add in a short description of what you are changing. then press enter and add in a long description, answer the next questions with Y or N depending on the answer and press enter to move on.
+
+
+### npm
+`--save-dev` is used for dev dependencies only. wont be included when built.
 
 ### Markdown
 
