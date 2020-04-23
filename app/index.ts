@@ -9,6 +9,6 @@ const loop =(count: number, phrase: string) => {
 const app =() => {
     const line = utils.createLine("Lemon", "Anger");
     loop(3,line);
-}
+};
 
 export default app;
