@@ -1,8 +1,9 @@
-import utils from './utils';
+import utils,{log,add} from './utils';
 
 const loop =(count: number, phrase: string) => {
     [...new Array(count)].forEach(() => {
-        console.info(phrase);
+        const result =add(9,);
+        log(result.toString());
     });
 };
 
