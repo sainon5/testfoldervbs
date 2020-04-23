@@ -163,7 +163,7 @@ In `Index.ts` we have a looped array that takes the number of loops from the fir
 
 1. install commitizen with `npm install commitizen -g` and run `commitizen init cz-conventional-changelog --save-dev --save-exact`afterwards. the `-g` means commitizen is installed globally, and will not need to be installed in another project on this device.
 2. now entering `npx git-cz`will being up a selection, navigatable by up and down arrows to select the correct option for your commit. Pressing enter will send you to the short scope of your commit, for example i changed a section in my steps. Therefore my scope was steps, press enter and add in a short description of what you are changing. then press enter and add in a long description, answer the next questions with Y or N depending on the answer and press enter to move on.
-
+3. `git push` will push commits to github.
 
 ### npm
 `--save-dev` is used for dev dependencies only. wont be included when built.
