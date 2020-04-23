@@ -59,7 +59,9 @@
 
 13. run `./node_modules/.bin/tsc` to compile
 14. `git add -A` to add code to git. Then go to source Control and Commit what you need committed.
-
+15. Add code to index ts, eg `console.info ("Guessssss Whoooo?")` Save and run `./node_modules/.bin/tsc` then `node .\bin\testfoldervcs` or project name equivalent
+16. `"start":"node ./bin/testfoldervcs"` gets added to package.json
+17. `npm run start` runs the program
 ### Code blocks
 
 
