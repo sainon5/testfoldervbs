@@ -4,14 +4,23 @@
   "description": "A node project for practice and learning",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart":"./node_modules/.bin/tsc",
-    "start":"node ./bin/testfoldervcs"
+    "test": "./node_modules/.bin/ava",
+    "prestart": "./node_modules/.bin/tsc",
+    "start": "node ./bin/testfoldervcs"
   },
   "keywords": [],
   "author": "Emilia Friend <emilia@wvvw.me> (https://github.com/sainon5)",
   "license": "MIT",
   "dependencies": {
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "ava": "^3.7.1",
+    "ts-node": "^8.9.0"
+  },
+  "ava":{
+    "extensions": ["ts"],
+    "require":["ts-node/register"]
   }
+  
 }

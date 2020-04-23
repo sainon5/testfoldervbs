@@ -7,5 +7,6 @@ export const createLine = (entity: string, describingWord: string) => {
 };
 
 export default {
-   createLine
+   createLine,
+   capitalise
 };

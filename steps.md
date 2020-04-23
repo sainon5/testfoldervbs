@@ -100,8 +100,40 @@
     ```
 The resulting code will take any string attached to capitalise and capitalise the entire string. It will create the variable createLine within `utils.ts` and assign entity to a string in the position before the comma, and the describing word after the comma. Which in `index.ts` is Lemon and Anger. it then returns as
 `Never ${capitalise(describingWord)} a ${entity};` Which would become Never ANGER (as it was capitalised) a Lemon.
-In `Index.ts` we have a looped array It takes the number of loops from the first number on line 11 and loops the 'line' which outputs the createline return the number of times specified. which results in Never ANGER an Lemon repeated 3 times.
+In `Index.ts` we have a looped array that takes the number of loops from the first number on line 11 and loops the 'line' which outputs the createline return the number of times specified. which results in Never ANGER an Lemon repeated 3 times.
 ## Day 2 Testing
+1. Install Ava with `npm install --save-dev ava`
+2. Create folder in main directory called test, create file called utils.test.ts
+3. Enter `import test from 'ava';` into `utils.test.ts`
+4. Install `npm install --save-dev ts-node`
+5. in `package.json` create new field beneath `"devDependencies"`
+    ```js
+    "ava":{
+    "extensions": ["ts"],
+    "require":["ts-node/register"]
+     }
+6. Create test in `utils.test.ts` enter the following
+    ```js
+    import {capitalise} from '../app/utils';
+
+    test('capitalise a string', (t) => {
+    t.is(capitalise("themoooon"), "THEMOOOON");
+    t.is(capitalise("themoooon"), "NOTTHEMOOOON");
+    })
+    ```
+    This imports capitalise from `utils.ts` using {} to find it as it was a specific function and not a default. to access it as a default. you must add it as a default in `utils.ts`replace capitalise in `utils.test.ts` with utils and add utils. before both capitalise's in the test string.
+    for example
+
+    ```js
+    import utils from '../app/utils';
+       
+    test('capitalise a string', (t) => {
+        t.is(utils.capitalise("themoooon"), "THEMOOOON");
+         t.is(utils.capitalise("themoooon"), "NOTTHEMOOOON");
+    })
+    ```
+7. Replace what is in `test` under `scripts` in `package.json`with `"./node_modules/.bin/ava"`, you are now able to run a test with `npm test`in the terminal.
+8. 
 
 ### Markdown
 
